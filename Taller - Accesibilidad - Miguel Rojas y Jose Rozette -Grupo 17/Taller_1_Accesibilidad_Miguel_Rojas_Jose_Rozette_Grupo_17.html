@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio de Accesibilidad</title>
+    <style>
+        body {
+            background-color: #fff;
+            color: #333;
+            font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+            padding: 1em;
+            margin: 0;
+        }
+        * { box-sizing: border-box; }
+        h1 { color: #222; }
+        section { margin-bottom: 40px; }
+
+        .button {
+            display: inline-block;
+            color: white;
+            background-color: blue;
+            border-radius: 10px;
+            min-width: 170px;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .button:focus, a:focus {
+            outline: 3px solid #000;
+            outline-offset: 3px;
+        }
+
+        form {
+            width: 400px;
+            max-width: 100%;
+        }
+        fieldset { padding: 20px; }
+        legend { font-weight: bold; }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+        input { padding: 5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Laboratorio de Accesibilidad</h1>
+        <p><strong>Estudiantes:</strong> Miguel Rojas y José Rozette</p>
+        <p><strong>Grupo:</strong> 17</p>
+    </header>
+
+    <main>
+        <section aria-labelledby="problema1">
+            <h2 id="problema1">Problema 1</h2>
+            <article>
+                <h3>Need help?</h3>
+                <p>
+                    If you have any problems with our products, our support center
+                    can offer you all the help you need, whether you want:
+                </p>
+                <ol>
+                    <li>Advice choosing a new product</li>
+                    <li>Tech support on an existing product</li>
+                    <li>Refund and cancellation assistance</li>
+                </ol>
+
+                <section>
+                    <h4>Contact us now</h4>
+                    <p>Our help center contains live chat, e-mail addresses, and phone numbers.</p>
+                    <a class="button" href="https://www.google.com/search?q=contact+support" target="_blank" rel="noopener noreferrer">Find Contact Details</a>
+                </section>
+
+                <section>
+                    <h4>Find out answers</h4>
+                    <p>
+                        Our Forums section contains a large knowledge base of searchable
+                        previously asked questions, and you can always ask a new question
+                        if you can't find the answer you're looking for.
+                    </p>
+                    <a class="button" href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">Access Forums</a>
+                </section>
+            </article>
+        </section>
+
+        <section aria-labelledby="problema2">
+            <h2 id="problema2">Problema 2</h2>
+            <form>
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <ul>
+                        <li>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name">
+                        </li>
+                        <li>
+                            <label for="age">Age</label>
+                            <input type="number" id="age" name="age">
+                        </li>
+                        <li>
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email">
+                        </li>
+                    </ul>
+                </fieldset>
+            </form>
+        </section>
+
+        <section aria-labelledby="problema3">
+            <h2 id="problema3">Problema 3</h2>
+            <p>
+                For more information about our activities, check out our
+                <a href="https://www.unicef.org/take-action" target="_blank" rel="noopener noreferrer">fundraising page</a>,
+                <a href="https://www.unesco.org/en/education" target="_blank" rel="noopener noreferrer">education page</a>,
+                <a href="sponsorship_pack.pdf">sponsorship pack (PDF, 8 MB)</a>,
+                and
+                <a href="assessment_sheets.docx" target="_blank">assessment sheets (Word document)</a>.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
